@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.radimous.rawvaultqol.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "rawvaultqol.refmap.json",
+  "mixins": [
+    "MixinToolItem",
+    "NoTrinketUsage"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
