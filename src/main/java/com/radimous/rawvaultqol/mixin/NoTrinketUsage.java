@@ -19,6 +19,7 @@ public class NoTrinketUsage {
     private static void noTrinketUsage(ItemStack stack, UUID vaultId) {
         if (ServerVaults.get(vaultId).isPresent()) {
             if (Rawvaultqol.isRawVault(ServerVaults.get(vaultId).get())) {
+                TrinketItem.addFreeUsedVault(stack, vaultId);
                 return;
             }
         }
