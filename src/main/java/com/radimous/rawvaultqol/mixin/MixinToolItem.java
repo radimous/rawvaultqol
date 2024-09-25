@@ -17,14 +17,11 @@ public class MixinToolItem {
     @Redirect(method = "damageItem", at = @At(value = "INVOKE", target = "Ljava/util/Optional;isEmpty()Z"))
     private boolean noDmg(Optional<Vault> instance){
         if (instance.isEmpty()){
-            System.out.println("EMPTY");
             return true; // not in vault
         }
         if (Rawvaultqol.isRawVault(instance.get())){
-            System.out.println("RAW");
             return true; // raw vault treated as not in vault
         }
-        System.out.println("IN VAULT");
         return false; // in vault
     }
 }
