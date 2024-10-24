@@ -20,7 +20,7 @@ public class Rawvaultqol {
         }
         var theme = wm.get(WorldManager.THEME);
         if (theme == null) {
-            return false:
+            return false;
         }
         return theme.toString().contains("the_vault:raw_vault");
     }
