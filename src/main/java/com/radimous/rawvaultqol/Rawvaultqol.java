@@ -7,8 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("rawvaultqol")
 public class Rawvaultqol {
-
-
+    
     public Rawvaultqol() {}
 
     public static boolean isRawVault(Vault vault) {
@@ -20,6 +19,9 @@ public class Rawvaultqol {
             return false;
         }
         var theme = wm.get(WorldManager.THEME);
+        if (theme == null) {
+            return false:
+        }
         return theme.toString().contains("the_vault:raw_vault");
     }
 }
