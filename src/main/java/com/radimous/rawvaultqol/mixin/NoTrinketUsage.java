@@ -22,6 +22,10 @@ public class NoTrinketUsage {
                 TrinketItem.addFreeUsedVault(stack, vaultId);
                 return;
             }
+            if (Rawvaultqol.isParadoxBuild(ServerVaults.get(vaultId).get())) {
+                TrinketItem.addFreeUsedVault(stack, vaultId);
+                return;
+            }
         }
         TrinketItem.addUsedVault(stack, vaultId);
     }
